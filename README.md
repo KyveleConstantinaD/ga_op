@@ -1,6 +1,6 @@
-# ga_op (Genetic Algorithm for the Orienteering Problem)
+# ga_op (Genetic Algorithm for the Orienteering Problem) for personalised tourism routes in rural areas
 
-This repository contains a Python implementation of a Genetic Algorithm (GA) designed to solve the Orienteering Problem (OP). <br>
+This repository contains a Python implementation of a Genetic Algorithm (GA) designed to solve the Orienteering Problem (OP) for personalised tourism in rural areas. <br>
 
 Two different methods for initial population are available. 
 Two different methods for parent selection are available; tournament and the new proposed methodology. <br>
