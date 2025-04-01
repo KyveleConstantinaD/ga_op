@@ -39,7 +39,6 @@ def checkTwoOpt(route,max):
 
 def parent_selection(nextgen,gen,tmax): #(popPois,pop,gen,j):
     # new parent selection method
-    a=0.3
     info=[]
     nextgenfeas=[n for n in nextgen if n[2]<=tmax]
        
@@ -59,9 +58,9 @@ def parent_selection(nextgen,gen,tmax): #(popPois,pop,gen,j):
         # routeDistance= nextgen[i][2]
         qualityScore=checkTwoOpt(route, routeDistance)
         score=nextgen[i][0]
-        info.append([i,nextgen[i],qualityScore, score - a*qualityScore,routex,routey])
+        info.append([i,nextgen[i],qualityScore,score,routex,routey])
             
-    sortedInfo = sorted(info, key=lambda x: -x[3])
+    sortedInfo = sorted(info, key=lambda x: (-x[3], x[2]))
     
     parent1=sortedInfo[0][1] #index of first solution based on ordered info list
     if len(sortedInfo)==1:
